@@ -1,5 +1,5 @@
 {
-  "name": "Crazy-Kittens",
+  "name": "encrypted-chat-tutorial",
   "version": "1.0.0",
   "node":"8.1.4",
   "description": "End-to-end RSA-256 encrypted chat application.",

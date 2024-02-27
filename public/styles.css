@@ -246,7 +246,10 @@ p {
 }
 
 .message-list {
+  max-height: 400px; /* Imposta un'altezza massima per il contenitore dei messaggi */
+  overflow-y: auto; /* Abilita lo scorrimento verticale se necessario */
   margin-bottom: 40px;
+  margin-top: 2px;
 }
 
 @keyframes gradientAnimation {
@@ -461,7 +464,7 @@ input[type="text"]:focus,
 
 .keys {
   /* Set a minimum height for the keys container */
-  min-height: 10em; /* Adjust as needed */
+  min-height: 500px; /* Adjust as needed */
   overflow-y: auto; /* Allows for scrolling */
   padding: 1em; /* Add some padding for visual comfort */
 }
@@ -476,4 +479,12 @@ input[type="text"]:focus,
   .key > p {
     font-size: 4vw; /* Larger font size for smaller screens */
   }
+}
+
+.info-container {
+  width: 90%; /* Imposta la larghezza desiderata */
+  margin: 0 auto; /* Centra il contenitore orizzontalmente */
+  padding: 20px; /* Aggiungi spazio interno */
+  margin-bottom: 200px;
+  min-height: 120%;
 }

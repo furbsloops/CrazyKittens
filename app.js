@@ -1,9 +1,3 @@
-import Vue from 'vue';
-import FooterComponent from './path/to/FooterComponent.vue';
-
-
-Vue.component('footer-component', FooterComponent);
-
 const express = require('express')
 
 // Setup Express server
@@ -20,6 +14,9 @@ app.use(express.static('public'))
 io.on('connection', (socket) => {
   console.log(`User Connected - Socket ID ${socket.id}`)
 
+  // Store the room that the socket is connected to
+  // If you need to scale the app horizontally, you'll need to store this variable in a persistent store such as Redis.
+  // For more info, see here: https://github.com/socketio/socket.io-redis
   let currentRoom = null
 
   /** Process a room join request. */
@@ -75,4 +72,3 @@ const port = process.env.PORT || 3000
 http.listen(port, () => {
   console.log(`Chat server listening on port ${port}.`)
 })
-
